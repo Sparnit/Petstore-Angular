@@ -1,0 +1,20 @@
+<div class="title"><h1>All Pets</h1></div>
+<ul>
+  <div class="listContents">
+   <li id = "{{pet.id}}"*ngFor="let pet of petsList; let i = index;">
+     <div class= "contentContainer">
+       <div class="imageContainer">
+         <img class="photo" src="{{pet.photoUrls[0]}}" alt="animal photo" />
+       </div>
+       <div  class="textContainer">
+         <span class="description"> <span class="keyField">{{pet.name | uppercase}}</span> man's best friend
+The friendship between man and animal has gone back thousands of years. They didn't become "man's best friend" for no reason. They give us unconditional love every day. My question is, do we deserve it?
+Dogs have been loyal to us. It's time we return the favor. He is <span class="keyField">{{pet.status | uppercase}}</span>
+            <img *ngIf="role === 'ADMIN'" alt="delete" class="delete" (click)="delete(pet.id)" style="float:right;" src ="./assets/error.png" height="30" width="30"/>
+          </span>
+       </div>
+     </div>
+     <div (click)="onSelect(pet)" class="detailButton">Click For Details</div>
+   </li>
+  </div>
+</ul>

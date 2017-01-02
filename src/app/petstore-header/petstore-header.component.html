@@ -1,0 +1,20 @@
+<div class="petstore-header">
+  
+<ul>
+  <li class="logo">
+    <img src="/assets/dog.png" alt="dog logo" height="50" width="50">
+  </li>
+  <li class="title">
+    <span>Parnit's Pet Shop</span>
+  </li>
+  <li *ngIf="!hideLinks">
+    <a routerLink="/petListing">Listing Page</a>
+  </li>
+  <li *ngIf="!hideLinks && role === 'ADMIN'">
+    <a routerLink="/petRegistration">Register Pet</a>
+  </li>
+  <li (click)="logOut()" *ngIf="!hideLinks" class="logOut">
+    <a href="">Logout</a>
+  </li>
+</ul>
+</div>

@@ -1,0 +1,21 @@
+<div *ngIf="pet" class="title"><h1>Pet Details</h1>
+<div class="detailsContent" >
+  <img id="img1" class="photo" src="{{pet.photoUrls[0]}}" alt="animal photo" />
+  <div class="textContent">
+
+  <span>Select a link to view Alernate Images</span>  
+  <ul>
+    <li class="photoList" *ngFor="let url of pet.photoUrls; let i= index;" (click)="changePhoto(url)">
+      Picture {{i + 1}}
+    </li>
+  </ul>
+  <span>Pet can be purchased with the following Tags</span>
+  <ul>
+    <li class="categories" *ngFor="let tag of pet.tags">
+      Available with {{tag.name | uppercase}} tag
+    </li>
+  </ul>
+  </div>
+  <div id={{pet.status}} class="status">{{pet.name | uppercase}} is {{pet.status | uppercase}}</div>
+</div>
+</div>

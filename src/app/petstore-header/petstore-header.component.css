@@ -1,0 +1,49 @@
+.petstore-header {
+    background: #1976D2;
+    height: 56px;
+    min-height: 56px;
+    color: #fff;
+    padding: 0;
+    box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 1);
+    padding:4px;
+    font-size: 20px;
+    font-family:Tahoma;
+    font-weight: 100;
+}
+ 
+li.title {
+    width: 250px;
+}
+
+li.logo {
+    width: 50px;
+    margin-top: -10px;
+}
+
+li {
+    height: 56px;
+    float:left;
+    padding: 0 22px;
+}
+
+
+ul{
+    list-style-type: none;
+    height:56px;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    margin: 0;
+    
+}
+
+li.logOut{
+    float:right;
+}
+
+a:hover{
+    color:#EAE5E5;
+    transition: background 2s ease-in
+}

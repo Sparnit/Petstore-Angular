@@ -1,0 +1,5 @@
+<app-petstore-header></app-petstore-header>
+<div class="title"><h1>Register a new Pet</h1></div>
+<app-pet-form (notify)="onPetCreation($event)"></app-pet-form>
+<app-pet-details [pet]="createdPet"></app-pet-details>
+

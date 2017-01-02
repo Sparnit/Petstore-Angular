@@ -1,0 +1,5 @@
+<app-petstore-header></app-petstore-header>
+<div class="pageContent">
+<app-pet-listing (notify)="onSelectedPetChange($event)" [petsList]="pets"></app-pet-listing>
+<app-pet-details [pet]="selectedPet"></app-pet-details>
+</div>
